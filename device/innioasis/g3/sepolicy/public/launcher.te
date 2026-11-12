@@ -1,0 +1,5 @@
+# Public SELinux policy for Launcher3QuickStep
+
+type launcher_app, domain;
+type launcher_app_data_file, file_type, data_file_type;
+type launcher_app_exec, exec_type, file_type;

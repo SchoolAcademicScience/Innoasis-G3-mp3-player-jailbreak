@@ -1,0 +1,19 @@
+# Product properties for Innioasis G3
+
+# Launcher
+ro.product.locale=en-US
+ro.product.locale.region=US
+
+# Features
+ro.product.first_api_level=28
+
+# SystemUI
+ro.systemui.statusbar.height=54
+
+# Apps
+ro.setupwizard.mode=OPTIONAL
+ro.setupwizard.rotation_locked=true
+
+# GMS
+ro.com.google.clientidbase=android-innioasis
+ro.com.google.gmsversion=14.0_r0

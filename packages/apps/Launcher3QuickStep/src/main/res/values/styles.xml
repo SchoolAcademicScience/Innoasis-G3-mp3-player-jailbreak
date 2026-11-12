@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base theme for launcher -->
+    <style name="Theme.Launcher3QuickStep" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/launcher_background</item>
+        <item name="android:colorBackground">@color/launcher_background</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+
+        <!-- Material You colors -->
+        <item name="colorPrimary">@color/system_blue</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+        <item name="colorSecondaryContainer">@color/secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/on_secondary_container</item>
+        <item name="colorTertiaryContainer">@color/tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/on_tertiary_container</item>
+        <item name="colorSurface">@color/launcher_background</item>
+        <item name="colorOnSurface">@android:color/white</item>
+        <item name="colorError">@color/system_red</item>
+        <item name="colorOnError">@android:color/white</item>
+
+        <!-- Typography -->
+        <item name="textAppearanceHeadlineLarge">@style/TextAppearance.Launcher3QuickStep.HeadlineLarge</item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.Launcher3QuickStep.HeadlineMedium</item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.Launcher3QuickStep.HeadlineSmall</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.Launcher3QuickStep.TitleLarge</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.Launcher3QuickStep.TitleMedium</item>
+        <item name="textAppearanceTitleSmall">@style/TextAppearance.Launcher3QuickStep.TitleSmall</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.Launcher3QuickStep.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.Launcher3QuickStep.BodyMedium</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.Launcher3QuickStep.BodySmall</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.Launcher3QuickStep.LabelLarge</item>
+        <item name="textAppearanceLabelMedium">@style/TextAppearance.Launcher3QuickStep.LabelMedium</item>
+        <item name="textAppearanceLabelSmall">@style/TextAppearance.Launcher3QuickStep.LabelSmall</item>
+    </style>
+
+    <!-- No ActionBar variant -->
+    <style name="Theme.Launcher3QuickStep.NoActionBar" parent="Theme.Launcher3QuickStep">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- All Apps theme -->
+    <style name="Theme.Launcher3QuickStep.AllApps" parent="Theme.Launcher3QuickStep">
+        <item name="android:windowBackground">@color/all_apps_background</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Launcher3QuickStep.AllApps</item>
+    </style>
+
+    <!-- Animations -->
+    <style name="Animation.Launcher3QuickStep.AllApps" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_up</item>
+        <item name="android:activityOpenExitAnimation">@anim/fade_in</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <!-- Text Appearances -->
+    <style name="TextAppearance.Launcher3QuickStep.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:textSize">32sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.Launcher3QuickStep.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textSize">28sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.Launcher3QuickStep.HeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.Launcher3QuickStep.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.Launcher3QuickStep.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.Launcher3QuickStep.TitleSmall" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.Launcher3QuickStep.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.Launcher3QuickStep.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.Launcher3QuickStep.BodySmall" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">#B3FFFFFF</item>
+    </style>
+
+    <style name="TextAppearance.Launcher3QuickStep.LabelLarge" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.Launcher3QuickStep.LabelMedium" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.Launcher3QuickStep.LabelSmall" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">#B3FFFFFF</item>
+    </style>
+
+    <!-- App Icon Text Style -->
+    <style name="Widget.Launcher3QuickStep.AppIcon.Label" parent="TextAppearance.Launcher3QuickStep.BodySmall">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- Search Bar TextInputLayout -->
+    <style name="Widget.Launcher3QuickStep.SearchBar" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/search_bar_bg_color</item>
+        <item name="boxCornerRadiusTopStart">@dimen/search_bar_corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/search_bar_corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/search_bar_corner_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/search_bar_corner_radius</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="hintTextColor">@color/search_hint</item>
+        <item name="android:textColorHint">@color/search_hint</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="Widget.Launcher3QuickStep.ActionButton" parent="Widget.Material3.Button.ElevatedButton">
+        <item name="android:background">@drawable/all_apps_button_bg</item>
+        <item name="android:padding">@dimen/all_apps_button_padding</item>
+        <item name="android:minWidth">@dimen/all_apps_button_size</item>
+        <item name="android:minHeight">@dimen/all_apps_button_size</item>
+    </style>
+
+    <style name="Widget.Launcher3QuickStep.CloseButton" parent="Widget.Material3.Button.ElevatedButton">
+        <item name="android:background">@drawable/all_apps_close_bg</item>
+        <item name="android:padding">@dimen/all_apps_close_padding</item>
+        <item name="android:minWidth">@dimen/all_apps_close_size</item>
+        <item name="android:minHeight">@dimen/all_apps_close_size</item>
+    </style>
+</resources>

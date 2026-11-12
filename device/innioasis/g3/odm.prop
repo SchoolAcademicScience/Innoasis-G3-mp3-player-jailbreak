@@ -1,0 +1,14 @@
+# ODM properties for Innioasis G3
+
+# Device specific
+ro.odm.device=g3
+ro.odm.model=G3
+
+# Audio
+ro.odm.audio.profile=music
+
+# Display
+ro.odm.display.density=240
+
+# Power
+ro.odm.power.profile=balanced

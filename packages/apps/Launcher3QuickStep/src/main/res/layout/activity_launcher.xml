@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/launcher_background"
+    android:fitsSystemWindows="true">
+
+    <!-- Background -->
+    <View
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/launcher_bg" />
+
+    <!-- Workspace (paged app grid) -->
+    <com.innioasis.launcher3.views.WorkspaceView
+        android:id="@+id/workspace"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dock_height"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/workspace_bottom_padding" />
+
+    <!-- Page Indicator -->
+    <com.innioasis.launcher3.views.PageIndicatorView
+        android:id="@+id/page_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/page_indicator_margin_bottom"
+        android:padding="@dimen/page_indicator_padding"
+        android:visibility="gone" />
+
+    <!-- Hotseat (bottom row, always visible) -->
+    <com.innioasis.launcher3.views.HotseatView
+        android:id="@+id/hotseat"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hotseat_height"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/hotseat_margin_bottom"
+        android:layout_marginHorizontal="@dimen/hotseat_margin_horizontal"
+        android:paddingVertical="@dimen/hotseat_padding_vertical" />
+
+    <!-- Dock (above hotseat) -->
+    <com.innioasis.launcher3.views.DockView
+        android:id="@+id/dock"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dock_height"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/dock_margin_bottom"
+        android:layout_marginHorizontal="@dimen/dock_margin_horizontal"
+        android:paddingVertical="@dimen/dock_padding_vertical" />
+
+    <!-- Search Bar & All Apps Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="@dimen/search_bar_margin_top"
+        android:layout_marginHorizontal="@dimen/search_bar_margin_horizontal"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/search_bar_height"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/search_bar_margin_end"
+            android:background="@drawable/search_bar_bg"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="@dimen/search_bar_drawable_padding"
+            android:gravity="center_vertical"
+            android:hint="@string/search_hint"
+            android:paddingHorizontal="@dimen/search_bar_padding_horizontal"
+            android:textColor="@color/search_text"
+            android:textColorHint="@color/search_hint"
+            android:textSize="@dimen/search_bar_text_size" />
+
+        <ImageView
+            android:id="@+id/all_apps_button"
+            android:layout_width="@dimen/all_apps_button_size"
+            android:layout_height="@dimen/all_apps_button_size"
+            android:background="@drawable/all_apps_button_bg"
+            android:contentDescription="@string/all_apps"
+            android:padding="@dimen/all_apps_button_padding"
+            android:src="@drawable/ic_apps" />
+
+    </LinearLayout>
+
+</FrameLayout>

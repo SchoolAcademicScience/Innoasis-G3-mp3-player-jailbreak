@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/all_apps_background"
+    android:fitsSystemWindows="true">
+
+    <!-- Background dim -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/all_apps_scrim" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:elevation="0dp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/all_apps_header_padding">
+
+                    <!-- Search Bar -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/search_apps"
+                        app:boxBackgroundColor="@color/search_bar_bg_color"
+                        app:boxCornerRadiusTopStart="@dimen/search_bar_corner_radius"
+                        app:boxCornerRadiusTopEnd="@dimen/search_bar_corner_radius"
+                        app:boxCornerRadiusBottomStart="@dimen/search_bar_corner_radius"
+                        app:boxCornerRadiusBottomEnd="@dimen/search_bar_corner_radius"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconDrawable="@drawable/ic_search"
+                        app:endIconTint="@color/search_hint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/search_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/search_bar_height"
+                            android:background="@android:color/transparent"
+                            android:imeOptions="actionSearch"
+                            android:inputType="text"
+                            android:paddingHorizontal="@dimen/search_bar_padding_horizontal"
+                            android:textColor="@color/search_text"
+                            android:textColorHint="@color/search_hint"
+                            android:textSize="@dimen/search_bar_text_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Close Button -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/all_apps_close_margin_top"
+                        android:gravity="end">
+
+                        <ImageView
+                            android:id="@+id/close_button"
+                            android:layout_width="@dimen/all_apps_close_size"
+                            android:layout_height="@dimen/all_apps_close_size"
+                            android:background="@drawable/all_apps_close_bg"
+                            android:contentDescription="@string/close"
+                            android:padding="@dimen/all_apps_close_padding"
+                            android:src="@drawable/ic_close" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- Apps Grid -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/apps_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:padding="@dimen/all_apps_grid_padding"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <!-- Empty State -->
+        <TextView
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/no_apps_found"
+            android:textColor="@color/empty_text"
+            android:textSize="@dimen/empty_text_size"
+            android:visibility="gone" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</FrameLayout>

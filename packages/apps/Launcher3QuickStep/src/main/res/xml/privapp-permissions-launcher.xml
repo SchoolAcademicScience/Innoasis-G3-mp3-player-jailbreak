@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Privileged permissions for Launcher3QuickStep -->
+<permissions>
+    <privapp-permissions package="com.innioasis.launcher3">
+        <permission name="android.permission.SET_WALLPAPER" />
+        <permission name="android.permission.SET_WALLPAPER_HINTS" />
+        <permission name="android.permission.BIND_APPWIDGET" />
+        <permission name="android.permission.READ_EXTERNAL_STORAGE" />
+        <permission name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <permission name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+        <permission name="android.permission.QUERY_ALL_PACKAGES" />
+        <permission name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    </privapp-permissions>
+</permissions>

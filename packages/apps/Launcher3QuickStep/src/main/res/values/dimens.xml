@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Screen density: hdpi (240dpi) for 4" screen -->
+    <!-- Base unit: 1dp = 1.5px on hdpi -->
+
+    <!-- Workspace -->
+    <dimen name="workspace_grid_padding">8dp</dimen>
+    <dimen name="workspace_bottom_padding">12dp</dimen>
+
+    <!-- Page Indicator -->
+    <dimen name="page_indicator_radius">4dp</dimen>
+    <dimen name="page_indicator_spacing">8dp</dimen>
+    <dimen name="page_indicator_margin_bottom">8dp</dimen>
+    <dimen name="page_indicator_padding">4dp</dimen>
+
+    <!-- Hotseat (bottom row) -->
+    <dimen name="hotseat_height">72dp</dimen>
+    <dimen name="hotseat_margin_bottom">8dp</dimen>
+    <dimen name="hotseat_margin_horizontal">16dp</dimen>
+    <dimen name="hotseat_padding_vertical">4dp</dimen>
+    <dimen name="hotseat_item_width">64dp</dimen>
+    <dimen name="hotseat_item_height">64dp</dimen>
+    <dimen name="hotseat_icon_size">52dp</dimen>
+    <dimen name="hotseat_item_spacing">12dp</dimen>
+
+    <!-- Dock (above hotseat) -->
+    <dimen name="dock_height">80dp</dimen>
+    <dimen name="dock_margin_bottom">8dp</dimen>
+    <dimen name="dock_margin_horizontal">16dp</dimen>
+    <dimen name="dock_padding_vertical">8dp</dimen>
+    <dimen name="dock_icon_size">48dp</dimen>
+    <dimen name="dock_item_padding_vertical">4dp</dimen>
+    <dimen name="dock_label_margin_top">4dp</dimen>
+    <dimen name="dock_label_text_size">11sp</dimen>
+    <dimen name="dock_item_spacing">16dp</dimen>
+
+    <!-- App Icon (workspace grid) -->
+    <dimen name="app_icon_size">48dp</dimen>
+    <dimen name="app_icon_padding">4dp</dimen>
+    <dimen name="app_icon_label_margin_top">4dp</dimen>
+    <dimen name="app_icon_label_text_size">12sp</dimen>
+
+    <!-- Search Bar -->
+    <dimen name="search_bar_height">44dp</dimen>
+    <dimen name="search_bar_margin_top">8dp</dimen>
+    <dimen name="search_bar_margin_horizontal">16dp</dimen>
+    <dimen name="search_bar_margin_end">8dp</dimen>
+    <dimen name="search_bar_padding_horizontal">16dp</dimen>
+    <dimen name="search_bar_drawable_padding">12dp</dimen>
+    <dimen name="search_bar_text_size">14sp</dimen>
+    <dimen name="search_bar_corner_radius">22dp</dimen>
+
+    <!-- All Apps Button -->
+    <dimen name="all_apps_button_size">44dp</dimen>
+    <dimen name="all_apps_button_padding">8dp</dimen>
+
+    <!-- All Apps Activity -->
+    <dimen name="all_apps_header_padding">16dp</dimen>
+    <dimen name="all_apps_close_margin_top">12dp</dimen>
+    <dimen name="all_apps_close_size">40dp</dimen>
+    <dimen name="all_apps_close_padding":8dp</dimen>
+    <dimen name="all_apps_grid_padding">12dp</dimen>
+    <dimen name="all_apps_item_size">80dp</dimen>
+    <dimen name="all_apps_item_padding">8dp</dimen>
+    <dimen name="all_apps_icon_size">52dp</dimen>
+    <dimen name="empty_text_size">16sp</dimen>
+
+    <!-- Animations -->
+    <dimen name="all_apps_enter_translation">50dp</dimen>
+    <dimen name="all_apps_exit_translation">50dp</dimen>
+
+    <!-- Icon Sizes -->
+    <dimen name="icon_size_small">24dp</dimen>
+    <dimen name="icon_size_medium">32dp</dimen>
+    <dimen name="icon_size_large">48dp</dimen>
+    <dimen name="icon_size_xlarge">64dp</dimen>
+</resources>

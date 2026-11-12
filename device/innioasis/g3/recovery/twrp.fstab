@@ -1,0 +1,36 @@
+# TWRP fstab for Innioasis G3 (MT6753)
+# <src>                    <mnt_point>   <type>  <mnt_flags>                    <fs_mgr_flags>
+
+# Boot partitions
+/dev/block/by-name/boot            /boot           emmc    defaults                        flags=display="Boot";flags=slotselect
+/dev/block/by-name/dtbo            /dtbo           emmc    defaults                        flags=display="DTBO"
+/dev/block/by-name/vbmeta          /vbmeta         emmc    defaults                        flags=display="VBMeta"
+/dev/block/by-name/vbmeta_system   /vbmeta_system  emmc    defaults                        flags=display="VBMeta System"
+/dev/block/by-name/vbmeta_vendor   /vbmeta_vendor  emmc    defaults                        flags=display="VBMeta Vendor"
+
+# Super partition (dynamic partitions)
+/dev/block/by-name/super           /super          emmc    defaults                        flags=display="Super"
+
+# System partitions (logical)
+/dev/block/mapper/system           /system         ext4    ro,barrier=1                  flags=display="System";flags=backup=1;flags=wipe=1
+/dev/block/mapper/vendor           /vendor         ext4    ro,barrier=1                  flags=display="Vendor";flags=backup=1;flags=wipe=1
+/dev/block/mapper/product          /product        ext4    ro,barrier=1                  flags=display="Product";flags=backup=1;flags=wipe=1
+/dev/block/mapper/odm              /odm            ext4    ro,barrier=1                  flags=display="ODM";flags=backup=1;flags=wipe=1
+
+# Data partitions
+/dev/block/by-name/userdata        /data           f2fs    noatime,nosuid,nodev,discard    flags=display="Data";flags=backup=1;flags=wipe=1;flags=encryptable=ice;flags=fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt
+/dev/block/by-name/metadata        /metadata       ext4    noatime,nosuid,nodev,discard    flags=display="Metadata"
+
+# Cache
+/dev/block/by-name/cache           /cache          ext4    noatime,nosuid,nodev,discard    flags=display="Cache";flags=wipe=1
+
+# Misc
+/dev/block/by-name/misc            /misc           emmc    defaults                        flags=display="Misc"
+
+# External storage
+/dev/block/by-name/expdb           /expdb          ext4    noatime,nosuid,nodev            flags=display="Expdb"
+/dev/block/by-name/protect1        /protect1       emmc    defaults                        flags=display="Protect1"
+/dev/block/by-name/protect2        /protect2       emmc    defaults                        flags=display="Protect2"
+
+# USB OTG
+/usb-otg                           /usb-otg        auto    defaults                        flags=display="USB-OTG";flags=removable

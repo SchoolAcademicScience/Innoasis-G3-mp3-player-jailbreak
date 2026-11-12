@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Launcher Background -->
+    <color name="launcher_background">#121212</color>
+    <color name="all_apps_background">#121212</color>
+    <color name="all_apps_scrim">#CC000000</color>
+
+    <!-- Search Bar -->
+    <color name="search_bar_bg_color">#1E1E1E</color>
+    <color name="search_text">#FFFFFF</color>
+    <color name="search_hint">#808080</color>
+
+    <!-- App Icons -->
+    <color name="app_icon_label">#FFFFFF</color>
+    <color name="dock_label">#FFFFFF</color>
+    <color name="empty_text">#808080</color>
+
+    <!-- Page Indicator -->
+    <color name="page_indicator_active">#FFFFFF</color>
+    <color name="page_indicator_inactive">#4DFFFFFF</color>
+
+    <!-- Accent Colors (Material You) -->
+    <color name="primary_container">#E8DEF8</color>
+    <color name="on_primary_container">#21005D</color>
+    <color name="secondary_container">#E8DEF8</color>
+    <color name="on_secondary_container">#21005D</color>
+    <color name="tertiary_container">#F5E0E0</color>
+    <color name="on_tertiary_container">#4A0000</color>
+
+    <!-- System Colors -->
+    <color name="system_blue">#4285F4</color>
+    <color name="system_green">#34A853</color>
+    <color name="system_red">#EA4335</color>
+    <color name="system_yellow">#FBBC05</color>
+</resources>

@@ -1,0 +1,22 @@
+# Recovery fstab for Innioasis G3 (MT6753) - used by stock recovery
+# <src>                    <mnt_point>   <type>  <mnt_flags>                    <fs_mgr_flags>
+
+/dev/block/by-name/boot            /boot           emmc    defaults                        wait
+/dev/block/by-name/dtbo            /dtbo           emmc    defaults                        wait
+/dev/block/by-name/vbmeta          /vbmeta         emmc    defaults                        wait
+/dev/block/by-name/vbmeta_system   /vbmeta_system  emmc    defaults                        wait
+/dev/block/by-name/vbmeta_vendor   /vbmeta_vendor  emmc    defaults                        wait
+
+/dev/block/by-name/super           /super          emmc    defaults                        wait
+
+/dev/block/mapper/system           /system         ext4    ro,barrier=1                  wait,first_stage_mount,avb
+/dev/block/mapper/vendor           /vendor         ext4    ro,barrier=1                  wait,first_stage_mount,avb
+/dev/block/mapper/product          /product        ext4    ro,barrier=1                  wait,first_stage_mount,avb
+/dev/block/mapper/odm              /odm            ext4    ro,barrier=1                  wait,first_stage_mount,avb
+
+/dev/block/by-name/userdata        /data           f2fs    noatime,nosuid,nodev,discard    wait,check,encryptable=ice,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt
+/dev/block/by-name/metadata        /metadata       ext4    noatime,nosuid,nodev,discard    wait,formattable,first_stage_mount
+
+/dev/block/by-name/cache           /cache          ext4    noatime,nosuid,nodev,discard    wait,check
+
+/dev/block/by-name/misc            /misc           emmc    defaults                        wait

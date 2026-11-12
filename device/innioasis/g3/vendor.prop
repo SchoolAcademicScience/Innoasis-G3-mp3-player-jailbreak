@@ -1,0 +1,62 @@
+# Vendor properties for Innioasis G3
+
+# MediaTek
+ro.mediatek.version.release=ALPS-MP-R0.MP1-V2.150
+ro.mediatek.platform=MT6753
+ro.mediatek.chip_ver=S01
+ro.mediatek.version.branch=ALPS-MP-R0.MP1
+ro.mediatek.version.sdk=9
+
+# Audio
+af.fast_track_multiplier=1
+audio.deep_buffer.media=true
+audio.offload.min.duration.secs=30
+audio.offload.video=true
+vendor.audio_hal.period_size=192
+vendor.audio_hal.in_period_size=192
+vendor.audio_hal.in_period_size=192
+vendor.voice.path.for.pcm.voip=true
+
+# Bluetooth
+bluetooth.chip.vendor=mediatek
+persist.bluetooth.enable_aptxhd=true
+persist.bluetooth.enable_aac=true
+persist.bluetooth.enable_ldac=true
+
+# Camera
+vendor.camera.aux.packagelist=com.innioasis.camera
+vendor.camera.hal1.packagelist=com.innioasis.camera
+
+# Display
+vendor.display.enable_default_color_mode=1
+vendor.gralloc.enable_fb_ubwc=1
+
+# DRM
+vendor.drm.avail_caps=1
+
+# Graphics
+vendor.gpu.mali=true
+vendor.gralloc.disable_afbc=0
+
+# IMS
+vendor.ims.enabled=false
+
+# Power
+vendor.powerhal.enabled=true
+vendor.powerhal.rendering_boost=1
+
+# Radio
+vendor.radio.eri_switch=1
+vendor.radio.mt_sms_ack=30
+
+# Sensors
+vendor.sensors.dev_ori=false
+vendor.sensors.pedometer=true
+vendor.sensors.step_detector=true
+
+# Thermal
+vendor.thermal.config=thermal.conf
+
+# WiFi
+vendor.wifi.chip=mt6753
+vendor.wifi.interface=wlan0

@@ -1,0 +1,30 @@
+# ProGuard rules for Launcher3QuickStep - aggressive optimization for 128MB target
+-dontoptimize
+-dontobfuscate
+-dontpreverify
+-dontnote
+-dontwarn
+
+# Keep launcher entry points
+-keep class com.innioasis.launcher3.Launcher { public protected *; }
+-keep class com.innioasis.launcher3.LauncherApplication { public protected *; }
+
+# Keep model classes
+-keep class com.innioasis.launcher3.model.** { *; }
+-keep class com.innioasis.launcher3.views.** { *; }
+-keep class com.innioasis.launcher3.util.** { *; }
+
+# Keep ViewHolders for RecyclerView
+-keepclassmembers class * extends androidx.recyclerview.widget.RecyclerView.ViewHolder {
+    <init>(...);
+}
+
+# Remove logging
+-assumenosideeffects class android.util.Log {
+    public static *** d(...);
+    public static *** v(...);
+    public static *** i(...);
+}
+
+# Aggressive inlining for performance
+-allowaccessmodification

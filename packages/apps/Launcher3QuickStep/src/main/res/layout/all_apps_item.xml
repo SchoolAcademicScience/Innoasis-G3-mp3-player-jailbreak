@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/all_apps_item_size"
+    android:layout_height="@dimen/all_apps_item_size"
+    android:gravity="center"
+    android:padding="@dimen/all_apps_item_padding">
+
+    <com.innioasis.launcher3.views.AppIconView
+        android:id="@+id/app_icon"
+        android:layout_width="@dimen/all_apps_icon_size"
+        android:layout_height="@dimen/all_apps_icon_size"
+        android:layout_gravity="center" />
+
+</FrameLayout>

@@ -1,0 +1,49 @@
+# SELinux policy for Launcher3QuickStep
+
+type launcher_app, domain;
+type launcher_app_data_file, file_type, data_file_type;
+type launcher_app_exec, exec_type, file_type;
+
+# Launcher app domain
+init_daemon_domain(launcher_app)
+app_data_file(launcher_app)
+
+# Allow launcher to read/write its data
+allow launcher_app launcher_app_data_file:file { read write create unlink getattr setattr };
+allow launcher_app launcher_app_data_file:dir { read write add_name remove_name search };
+
+# Allow launcher to execute
+allow launcher_app launcher_app_exec:file { read execute execute_no_trans getattr };
+
+# Allow launcher to interact with package manager
+allow launcher_app package_manager_service:binder { call transfer };
+
+# Allow launcher to read package info
+allow launcher_app system_server:binder { call transfer };
+
+# Allow launcher to bind app widgets
+allow launcher_app appwidget_service:binder { call transfer };
+
+# Allow launcher to set wallpaper
+allow launcher_app wallpaper_service:binder { call transfer };
+
+# Allow launcher to access external storage
+allow launcher_app sdcardd:binder { call transfer };
+
+# Allow launcher to read system properties
+allow launcher_app property_service:service_manager find;
+
+# Allow launcher to read/write settings
+allow launcher_app settings_provider:binder { call transfer };
+
+# Allow launcher to start activities
+allow launcher_app activity_service:binder { call transfer };
+
+# Allow launcher to query packages
+allow launcher_app package_manager_service:binder { call transfer };
+
+# Allow launcher to access usage stats
+allow launcher_app usagestats_service:binder { call transfer };
+
+# Allow launcher to read installed packages
+allow launcher_app package_manager_service:binder { call transfer };

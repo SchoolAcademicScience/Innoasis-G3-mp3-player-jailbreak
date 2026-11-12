@@ -1,0 +1,35 @@
+android_app {
+    name: "Launcher3QuickStep",
+    min_sdk_version: "33",
+    target_sdk_version: "34",
+    platform_apis: true,
+    privileged: true,
+    certificate: "platform",
+    required: ["privapp-permissions-launcher.xml"],
+    manifest: "src/main/AndroidManifest.xml",
+    srcs: [
+        "src/main/java/com/innioasis/launcher3/**/*.kt",
+    ],
+    resource_dirs: ["src/main/res"],
+    static_libs: [
+        "androidx.appcompat_appcompat",
+        "androidx.recyclerview_recyclerview",
+        "androidx.constraintlayout_constraintlayout",
+        "androidx.core_core-ktx",
+        "androidx.lifecycle_lifecycle-runtime-ktx",
+        "androidx.lifecycle_lifecycle-viewmodel-ktx",
+        "com.google.android.material_material",
+        "launcher3-statemanager",
+        "launcher3-util",
+    ],
+    optimize: {
+        enabled: true,
+        proguard_flags_files: ["proguard.flags"],
+        shrink_resources: true,
+    },
+    compile_multidex: "legacy",
+    dex_preopt: {
+        app_image: true,
+        profile_guided: true,
+    },
+}

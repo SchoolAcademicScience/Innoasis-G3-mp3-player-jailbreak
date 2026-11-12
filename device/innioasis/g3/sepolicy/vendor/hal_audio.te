@@ -1,0 +1,25 @@
+# Vendor SELinux policy for audio HAL
+
+type hal_audio, domain;
+type hal_audio_exec, exec_type, file_type;
+type hal_audio_tmpfs, file_type;
+
+init_daemon_domain(hal_audio)
+
+# Allow audio HAL to read vendor configs
+allow hal_audio vendor_configs_file:file { read getattr };
+
+# Allow audio HAL to access audio devices
+allow hal_audio audio_device:chr_file { read write getattr };
+
+# Allow audio HAL to access mixer
+allow hal_audio mixer_device:chr_file { read write getattr ioctl };
+
+# Allow audio HAL to access DSP
+allow hal_audio dsp_device:chr_file { read write getattr ioctl };
+
+# Allow audio HAL to use binder
+allow hal_audio servicemanager:binder { call transfer add };
+
+# Allow audio HAL to read/write audio params
+allow hal_audio audio_param_file:file { read write create getattr };
