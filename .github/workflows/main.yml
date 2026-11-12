@@ -1,0 +1,35 @@
+name: Build Innioasis G3 ROM
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:  # Manual trigger button
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download stock firmware
+        run: |
+          wget -O rom_g3.zip "${{ secrets.STOCK_FIRMWARE_URL }}"
+          echo "Firmware size: $(du -h rom_g3.zip)"
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y git python3 openjdk-17-jdk bc bison build-essential ccache curl flex g++-multilib gcc-multilib gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-gtk3-dev libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
+
+      - name: Build ROM
+        run: |
+          chmod +x build.sh scripts/extract_payload.py
+          ./build.sh all
+
+      - name: Upload ROM artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lineage-g3-rom
+          path: out/target/product/g3/lineage-*.zip
+          retention-days: 7
